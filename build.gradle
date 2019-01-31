@@ -1,0 +1,56 @@
+
+plugins {
+    id 'java'
+    id 'maven'
+    id 'maven-publish'
+    id 'com.jfrog.artifactory' version '4.8.1'
+    
+}
+
+description = 'fwmt-census-common'
+
+version = '1.0.0-SNAPSHOT'
+
+group = 'uk.gov.ons.fwmt'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+dependencies {
+    compile("org.projectlombok:lombok:1.18.4")
+    annotationProcessor("org.projectlombok:lombok:1.18.4")
+}
+
+repositories {
+    mavenLocal()
+    maven { url 'http://artifactory-sdc.onsdigital.uk/artifactory/libs-release' }
+    maven { url 'http://artifactory-sdc.onsdigital.uk/artifactory/libs-snapshot' }
+    mavenCentral()
+}
+
+artifactory {
+    contextUrl = System.getenv('ARTIFACTORY_URL')
+    publish {
+        repository {
+            repoKey = 'libs-snapshot-local'
+            username = System.getenv('ARTIFACTORY_USERNAME')
+            password = System.getenv('ARTIFACTORY_PASSWORD')
+        }
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = group
+            artifactId = 'fwmt-census-canonical'
+            version = version
+
+            from components.java
+        }
+    }
+}
+
+artifactoryPublish {
+    publications 'maven'
+}
