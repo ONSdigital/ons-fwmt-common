@@ -47,7 +47,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = group
-            artifactId = 'fwmt-census-canonical'
+            artifactId = 'fwmt-census-common'
             version = version
 
             from components.java
