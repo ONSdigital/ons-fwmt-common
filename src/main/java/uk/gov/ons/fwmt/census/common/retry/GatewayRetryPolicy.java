@@ -18,7 +18,7 @@ import java.util.List;
  * <p>This RetryPolicy is used in our Spring Integration flows when picking up a message off a
  * queue.
  */
-public class CTPRetryPolicy implements RetryPolicy {
+public class GatewayRetryPolicy implements RetryPolicy {
   private static final int DEFAULT_MAX_ATTEMPTS = 3;
   private static final String RUNTIME_EXCEPTION = "java.lang.RuntimeException";
 
@@ -29,7 +29,7 @@ public class CTPRetryPolicy implements RetryPolicy {
   /**
    * Default CTP Retry Policy Constructor
    */
-  public CTPRetryPolicy() {
+  public GatewayRetryPolicy() {
     this(DEFAULT_MAX_ATTEMPTS);
   }
 
@@ -38,7 +38,7 @@ public class CTPRetryPolicy implements RetryPolicy {
    *
    * @param maxAttempts maximum retry attempts
    */
-  public CTPRetryPolicy(int maxAttempts) {
+  public GatewayRetryPolicy(int maxAttempts) {
     this(maxAttempts, Collections.singletonList(RUNTIME_EXCEPTION));
   }
 
@@ -48,7 +48,7 @@ public class CTPRetryPolicy implements RetryPolicy {
    * @param maxAttempts         maximum retry attempts
    * @param retryableExceptions exceptions to retry for
    */
-  public CTPRetryPolicy(int maxAttempts, List<String> retryableExceptions) {
+  public GatewayRetryPolicy(int maxAttempts, List<String> retryableExceptions) {
     this.maxAttempts = maxAttempts;
     this.retryableExceptions = retryableExceptions;
   }

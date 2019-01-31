@@ -16,8 +16,8 @@ import java.text.SimpleDateFormat;
  * not be displayed to end users through the UI, but may be of use to developers and support staff
  * using postman or reading logs.
  */
-@JsonSerialize(using = CTPException.OurExceptionSerializer.class)
-public class CTPException extends Exception {
+@JsonSerialize(using = GatewayException.OurExceptionSerializer.class)
+public class GatewayException extends Exception {
 
   private static final long serialVersionUID = -1569645569528433069L;
   private static final String UNDEFINED_MSG = "Non Specific Error";
@@ -29,7 +29,7 @@ public class CTPException extends Exception {
    *
    * @param afault associated with the CTPException about to be created.
    */
-  public CTPException(final Fault afault) {
+  public GatewayException(final Fault afault) {
     this(afault, UNDEFINED_MSG, (Object[]) null);
   }
 
@@ -39,7 +39,7 @@ public class CTPException extends Exception {
    * @param afault associated with the CTPException about to be created.
    * @param cause  associated with the CTPException about to be created.
    */
-  public CTPException(final Fault afault, final Throwable cause) {
+  public GatewayException(final Fault afault, final Throwable cause) {
     this(afault, cause, (cause != null) ? cause.getMessage() : "", (Object[]) null);
   }
 
@@ -50,7 +50,7 @@ public class CTPException extends Exception {
    * @param message associated with the CTPException about to be created.
    * @param args    substitutes for the message string.
    */
-  public CTPException(final Fault afault, final String message, final Object... args) {
+  public GatewayException(final Fault afault, final String message, final Object... args) {
     this(afault, null, message, args);
   }
 
@@ -62,7 +62,7 @@ public class CTPException extends Exception {
    * @param message associated with the CTPException about to be created.
    * @param args    substitutes for the message string.
    */
-  public CTPException(
+  public GatewayException(
       final Fault afault, final Throwable cause, final String message, final Object... args) {
     super((message != null) ? String.format(message, args) : "", cause);
     fault = afault;
@@ -120,7 +120,7 @@ public class CTPException extends Exception {
   /**
    * To customise the serialization of CTPException objects
    */
-  public static class OurExceptionSerializer extends JsonSerializer<CTPException> {
+  public static class OurExceptionSerializer extends JsonSerializer<GatewayException> {
     /**
      * To customise the serialization of CTPException objects
      *
@@ -130,7 +130,7 @@ public class CTPException extends Exception {
      */
     @Override
     public final void serialize(
-        final CTPException value, final JsonGenerator jgen, final SerializerProvider provider)
+        final GatewayException value, final JsonGenerator jgen, final SerializerProvider provider)
         throws IOException {
       SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
 
