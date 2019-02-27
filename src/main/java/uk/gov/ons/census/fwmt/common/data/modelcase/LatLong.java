@@ -1,4 +1,4 @@
-package uk.gov.ons.fwmt.census.common.data.modelcase;
+package uk.gov.ons.census.fwmt.common.data.modelcase;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;

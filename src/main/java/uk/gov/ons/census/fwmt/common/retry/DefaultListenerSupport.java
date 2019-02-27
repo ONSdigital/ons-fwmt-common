@@ -1,4 +1,4 @@
-package uk.gov.ons.fwmt.census.common.retry;
+package uk.gov.ons.census.fwmt.common.retry;
 
 import org.springframework.retry.listener.RetryListenerSupport;
 

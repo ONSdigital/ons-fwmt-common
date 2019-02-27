@@ -1,4 +1,4 @@
-package uk.gov.ons.fwmt.census.common.error;
+package uk.gov.ons.census.fwmt.common.error;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
