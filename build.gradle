@@ -7,7 +7,7 @@ plugins {
     
 }
 
-description = 'fwmt-census-common'
+description = 'census-fwmt-common'
 
 version = '1.0.2-SNAPSHOT'
 
@@ -50,7 +50,7 @@ publishing {
     publications {
         maven(MavenPublication) {
             groupId = group
-            artifactId = 'fwmt-census-common'
+            artifactId = 'census-fwmt-common'
             version = version
 
             from components.java
