@@ -11,7 +11,7 @@ description = 'census-fwmt-common'
 
 version = '1.0.2-SNAPSHOT'
 
-group = 'uk.gov.ons.fwmt'
+group = 'uk.gov.ons.census.fwmt'
 
 sourceCompatibility = 11
 targetCompatibility = 11
