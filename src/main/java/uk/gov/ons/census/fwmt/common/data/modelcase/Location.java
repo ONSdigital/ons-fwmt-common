@@ -6,13 +6,13 @@ import lombok.NoArgsConstructor;
 import java.util.Objects;
 
 /**
- * Link
+ * Location
  */
 @Data
 @NoArgsConstructor
-public class Link {
-  private String rel = null;
-  private String href = null;
+public class Location {
+  private Float lat = null;
+  private Float _long = null;
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -22,23 +22,23 @@ public class Link {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Link link = (Link) o;
-    return Objects.equals(this.rel, link.rel) &&
-        Objects.equals(this.href, link.href);
+    Location location = (Location) o;
+    return Objects.equals(this.lat, location.lat) &&
+        Objects.equals(this._long, location._long);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(rel, href);
+    return Objects.hash(lat, _long);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Link {\n");
+    sb.append("class Location {\n");
 
-    sb.append("    rel: ").append(toIndentedString(rel)).append("\n");
-    sb.append("    href: ").append(toIndentedString(href)).append("\n");
+    sb.append("    lat: ").append(toIndentedString(lat)).append("\n");
+    sb.append("    _long: ").append(toIndentedString(_long)).append("\n");
     sb.append("}");
     return sb.toString();
   }

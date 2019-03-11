@@ -9,7 +9,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class FetchResponseCase {
-  private List<ModelCase> results = new ArrayList<ModelCase>();
+  private List<ModelCase> results = new ArrayList<>();
   private PagingInfo paging = null;
   private FetchCriteria criteria = null;
 
