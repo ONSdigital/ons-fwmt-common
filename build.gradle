@@ -21,8 +21,7 @@ dependencies {
     compile ("com.fasterxml.jackson.core:jackson-databind:2.9.8")
 
     compile ("org.projectlombok:lombok:1.18.6")
-
-
+    
     compile ("org.springframework.retry:spring-retry:1.2.2.RELEASE")
     compile ("org.springframework.amqp:spring-amqp:1.7.5.RELEASE")
 
