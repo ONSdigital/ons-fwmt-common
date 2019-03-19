@@ -1,21 +1,17 @@
 package uk.gov.ons.census.fwmt.common.data.modelcase;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 
 /**
  * Case
  */
 @Data
 @NoArgsConstructor
-public class ModelCase {
-  private UUID id = null;
+public class CaseRequest {
   private String reference = null;
   private TypeEnum type = null;
   private String surveyType = null;
@@ -31,8 +27,7 @@ public class ModelCase {
   private Boolean sai = false;
   private CeCaseExtension ce = null;
   private CcsCaseExtension ccs = null;
-  private CasePause pause = null;
-  private List<Link> _links = null;
+  private CasePauseRequest pause = null;
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -42,40 +37,37 @@ public class ModelCase {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ModelCase _case = (ModelCase) o;
-    return Objects.equals(this.id, _case.id) &&
-        Objects.equals(this.reference, _case.reference) &&
-        Objects.equals(this.type, _case.type) &&
-        Objects.equals(this.surveyType, _case.surveyType) &&
-        Objects.equals(this.category, _case.category) &&
-        Objects.equals(this.estabType, _case.estabType) &&
-        Objects.equals(this.coordCode, _case.coordCode) &&
-        Objects.equals(this.contact, _case.contact) &&
-        Objects.equals(this.address, _case.address) &&
-        Objects.equals(this.location, _case.location) &&
-        Objects.equals(this.description, _case.description) &&
-        Objects.equals(this.specialInstructions, _case.specialInstructions) &&
-        Objects.equals(this.uaa, _case.uaa) &&
-        Objects.equals(this.sai, _case.sai) &&
-        Objects.equals(this.ce, _case.ce) &&
-        Objects.equals(this.ccs, _case.ccs) &&
-        Objects.equals(this.pause, _case.pause) &&
-        Objects.equals(this._links, _case._links);
+    CaseRequest caseRequest = (CaseRequest) o;
+    return Objects.equals(this.reference, caseRequest.reference) &&
+        Objects.equals(this.type, caseRequest.type) &&
+        Objects.equals(this.surveyType, caseRequest.surveyType) &&
+        Objects.equals(this.category, caseRequest.category) &&
+        Objects.equals(this.estabType, caseRequest.estabType) &&
+        Objects.equals(this.coordCode, caseRequest.coordCode) &&
+        Objects.equals(this.contact, caseRequest.contact) &&
+        Objects.equals(this.address, caseRequest.address) &&
+        Objects.equals(this.location, caseRequest.location) &&
+        Objects.equals(this.description, caseRequest.description) &&
+        Objects.equals(this.specialInstructions, caseRequest.specialInstructions) &&
+        Objects.equals(this.uaa, caseRequest.uaa) &&
+        Objects.equals(this.sai, caseRequest.sai) &&
+        Objects.equals(this.ce, caseRequest.ce) &&
+        Objects.equals(this.ccs, caseRequest.ccs) &&
+        Objects.equals(this.pause, caseRequest.pause);
   }
 
   @Override
   public int hashCode() {
     return Objects
-        .hash(id, reference, type, surveyType, category, estabType, coordCode, contact, address, location, description,
-            specialInstructions, uaa, sai, ce, ccs, pause, _links);
+        .hash(reference, type, surveyType, category, estabType, coordCode, contact, address, location, description,
+            specialInstructions, uaa, sai, ce, ccs, pause);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ModelCase {\n");
+    sb.append("class CaseRequest {\n");
 
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    reference: ").append(toIndentedString(reference)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    surveyType: ").append(toIndentedString(surveyType)).append("\n");
@@ -92,7 +84,6 @@ public class ModelCase {
     sb.append("    ce: ").append(toIndentedString(ce)).append("\n");
     sb.append("    ccs: ").append(toIndentedString(ccs)).append("\n");
     sb.append("    pause: ").append(toIndentedString(pause)).append("\n");
-    sb.append("    _links: ").append(toIndentedString(_links)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -135,7 +126,6 @@ public class ModelCase {
     }
 
     @Override
-    @JsonValue
     public String toString() {
       return String.valueOf(value);
     }

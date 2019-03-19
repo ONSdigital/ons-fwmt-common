@@ -6,13 +6,12 @@ import lombok.NoArgsConstructor;
 import java.util.Objects;
 
 /**
- * Link
+ * CcsCaseExtension
  */
 @Data
 @NoArgsConstructor
-public class Link {
-  private String rel = null;
-  private String href = null;
+public class CcsCaseExtension {
+  private String questionnaireUrl = null;
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -22,23 +21,21 @@ public class Link {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Link link = (Link) o;
-    return Objects.equals(this.rel, link.rel) &&
-        Objects.equals(this.href, link.href);
+    CcsCaseExtension ccsCaseExtension = (CcsCaseExtension) o;
+    return Objects.equals(this.questionnaireUrl, ccsCaseExtension.questionnaireUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(rel, href);
+    return Objects.hash(questionnaireUrl);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Link {\n");
+    sb.append("class CcsCaseExtension {\n");
 
-    sb.append("    rel: ").append(toIndentedString(rel)).append("\n");
-    sb.append("    href: ").append(toIndentedString(href)).append("\n");
+    sb.append("    questionnaireUrl: ").append(toIndentedString(questionnaireUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }
