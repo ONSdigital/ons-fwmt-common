@@ -36,3 +36,4 @@ after_success:
     git commit -m "CONCOURSE SNAPSHOT UPDATE"
     git push --quiet https://$UNAME:$PASSWD@$REPO --all
   fi
+
