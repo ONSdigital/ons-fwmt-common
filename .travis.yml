@@ -34,5 +34,5 @@ after_success:
     sed -ie "s/\(^version.*[0-9]*\.[0-9]*\.\)[0-9]*/\1${num}/" build.gradle
     git add build.gradle
     git commit -m "CONCOURSE SNAPSHOT UPDATE"
-    git push origin HEAD:master
+    git push --quiet https://$UNAME:$PASSWD@$REPO --all
   fi
