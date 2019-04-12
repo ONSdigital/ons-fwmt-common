@@ -12,8 +12,6 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 public class CasePauseRequest extends AbsolutePauseRequest {
 
-  private String until = null;
-
   private String reason = null;
 
   private String code = null;
