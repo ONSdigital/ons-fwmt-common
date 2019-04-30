@@ -32,6 +32,8 @@ public class CaseRequest {
 
   private String specialInstructions = null;
 
+  private String fieldOfficerId = null;
+
   private Boolean uaa = false;
 
   private Boolean sai = false;
