@@ -42,6 +42,8 @@ public class CaseRequest {
 
   private CasePauseRequest pause = null;
 
+  private String fieldOfficerId = null;
+
   /**
    * Case Type.
    */
