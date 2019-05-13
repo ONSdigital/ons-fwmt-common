@@ -17,5 +17,4 @@ public class CasePause {
 
   private String reason = null;
 
-
 }
