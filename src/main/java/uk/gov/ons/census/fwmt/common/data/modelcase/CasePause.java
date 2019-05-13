@@ -17,5 +17,5 @@ public class CasePause {
 
   private String reason = null;
 
-  private List<Link> _links = null;
+
 }
