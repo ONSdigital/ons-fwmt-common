@@ -11,4 +11,5 @@ import lombok.NoArgsConstructor;
 public class Geography {
 
   private String oa = null;
+
 }

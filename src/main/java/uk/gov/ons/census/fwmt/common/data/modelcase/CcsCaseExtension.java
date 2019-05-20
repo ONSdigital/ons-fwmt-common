@@ -11,4 +11,5 @@ import lombok.NoArgsConstructor;
 public class CcsCaseExtension {
 
   private String questionnaireUrl = null;
+
 }

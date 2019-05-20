@@ -17,4 +17,5 @@ public class CeCaseExtension {
   private Integer expectedResponses = null;
 
   private Integer actualResponses = null;
+
 }

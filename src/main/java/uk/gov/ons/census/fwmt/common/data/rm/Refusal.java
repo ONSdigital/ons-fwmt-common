@@ -31,4 +31,5 @@ public class Refusal {
 
   @JsonProperty("collectionCase")
   private CollectionCase collectionCase;
+
 }
