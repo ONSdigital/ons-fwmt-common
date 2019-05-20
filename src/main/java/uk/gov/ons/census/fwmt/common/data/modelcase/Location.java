@@ -15,4 +15,5 @@ public class Location {
 
   @JsonProperty("long")
   private Float _long = null;
+
 }

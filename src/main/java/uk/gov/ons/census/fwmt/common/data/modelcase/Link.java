@@ -13,4 +13,5 @@ public class Link {
   private String rel = null;
 
   private String href = null;
+
 }
