@@ -1,42 +1,42 @@
 package uk.gov.ons.census.fwmt.common.data.comet;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "questionnaireType",
-    "questionnaireId",
-    "requesterTitle",
-    "requesterForename",
-    "requesterSurname",
-    "requesterPhone"
-})
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ApiModel
 public class FulfillmentRequest {
 
-  @JsonProperty("questionnaireType")
+  @ApiModelProperty(notes = "H1/HC1/I1, plus other values for languages - H4/I4 for NI", required = true)
+  @Size(max = 16)
   private String questionnaireType;
 
-  @JsonProperty("questionnaireId")
+  @ApiModelProperty(notes = "Scanned from paper app")
+  @Size(max = 16)
   private String questionnaireId;
 
-  @JsonProperty("requesterTitle")
+  @ApiModelProperty(notes = "For posting paper I forms (H/H1 can be addressed to household)")
+  @Size(max = 20)
   private String requesterTitle;
 
-  @JsonProperty("requesterForename")
+  @ApiModelProperty(notes = "For posting paper I forms (H/H1 can be addressed to household)")
+  @Size(max = 35)
   private String requesterForename;
 
-  @JsonProperty("requesterSurname")
+  @ApiModelProperty(notes = "For posting paper I forms (H/H1 can be addressed to household)")
+  @Size(max = 35)
   private String requesterSurname;
 
-  @JsonProperty("requesterPhone")
+  @ApiModelProperty(notes = "For texting UACs")
+  @Size(max = 13)
   private String requesterPhone;
 
 }

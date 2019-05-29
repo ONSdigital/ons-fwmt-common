@@ -1,56 +1,55 @@
 package uk.gov.ons.census.fwmt.common.data.comet;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
 import java.util.List;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "establishmentName",
-    "establishmentType",
-    "managerTitle",
-    "managerForename",
-    "managerSurname",
-    "usualResidents",
-    "contactPhone",
-    "accessInfo",
-    "careCodes"
-})
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ApiModel
 public class CeDetails {
 
-  @JsonProperty("establishmentName")
+  @ApiModelProperty(notes = "Name of the CE", required = true)
+  @Size(max = 60)
   private String establishmentName;
 
-  @JsonProperty("establishmentType")
+  @ApiModelProperty(notes = "Type of the establishment", required = true)
+  @Size(max = 30)
   private String establishmentType;
 
-  @JsonProperty("managerTitle")
+  @ApiModelProperty(notes = "Title of the CE Manager e.g. Mr, Mrs")
+  @Size(max = 20)
   private String managerTitle;
 
-  @JsonProperty("managerForename")
+  @ApiModelProperty(notes = "Forename of the CE Manager")
+  @Size(max = 35)
   private String managerForename;
 
-  @JsonProperty("managerSurname")
+  @ApiModelProperty(notes = "Surname of the CE Manager")
+  @Size(max = 35)
   private String managerSurname;
 
-  @JsonProperty("usualResidents")
+  @ApiModelProperty(notes = "The number of actual responses to be expected from the CE")
   private Integer usualResidents;
 
-  @JsonProperty("contactPhone")
+  @ApiModelProperty(notes = "Contact number of the CE")
+  @Size(max = 13)
   private String contactPhone;
 
-  @JsonProperty("accessInfo")
+  @ApiModelProperty(notes = "Access/security info")
   private String accessInfo;
 
-  @JsonProperty("careCodes")
+  @ApiModelProperty(notes = "Care Codes applied to the case, can be 0, 1 or more of:\n"
+      + "Access control\n"
+      + "Aggressive animal\n"
+      + "Caution required")
   private List<CareCode> careCodes = null;
 
 }
