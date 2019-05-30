@@ -1,58 +1,50 @@
 package uk.gov.ons.census.fwmt.common.data.comet;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "transactionId",
-    "eventDate",
-    "username",
-    "caseId",
-    "caseReference",
-    "primaryOutcome",
-    "secondaryOutcome",
-    "ceDetails",
-    "fulfillmentRequests"
-})
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ApiModel
 public class HouseholdOutcome {
 
-  @JsonProperty("transactionId")
+  @ApiModelProperty(notes = "Unique identifier for the request", required = true)
   private UUID transactionId;
 
-  @JsonProperty("eventDate")
+  @ApiModelProperty(notes = "Date/time of the recorded the outcome", example = "2011-08-12T20:17:46.384Z", required = true)
   private LocalDateTime eventDate;
 
-  @JsonProperty("username")
+  @ApiModelProperty(notes = "Identifier of the field officer that recorded the outcome", required = true)
+  @Size(max = 10)
   private String username;
 
-  @JsonProperty("caseId")
+  // Remove from object and instead pass from POST param
+  @ApiModelProperty(notes = "Identifier of the case", required = true)
   private UUID caseId;
 
-  @JsonProperty("caseReference")
+  @ApiModelProperty(notes = "Human readable identifier of the case", required = true)
   private String caseReference;
 
-  @JsonProperty("primaryOutcome")
+  @ApiModelProperty(notes = "Primary outcome code, e.g. No Valid Household", required = true)
   private String primaryOutcome;
 
-  @JsonProperty("secondaryOutcome")
+  @ApiModelProperty(notes = "Secondary outcome code, e.g. Derelict")
   private String secondaryOutcome;
 
-  @JsonProperty("ceDetails")
+  @ApiModelProperty(notes = "CE details")
   private CeDetails ceDetails;
 
-  @JsonProperty("fulfillmentRequests")
+  @ApiModelProperty(notes = "List of Fulfilment Request objects")
   private List<FulfillmentRequest> fulfillmentRequests = null;
 
 }

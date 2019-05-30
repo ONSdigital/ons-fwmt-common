@@ -1,22 +1,19 @@
 package uk.gov.ons.census.fwmt.common.data.comet;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "careCode"
-})
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ApiModel
+
 public class CareCode {
 
-  @JsonProperty("careCode")
+  @ApiModelProperty(notes = "Value of an applied care code on the case", required = true)
   private String careCode;
 
 }
