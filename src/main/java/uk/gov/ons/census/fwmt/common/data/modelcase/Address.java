@@ -22,4 +22,10 @@ public class Address {
   private String postcode = null;
 
   private Geography geography = null;
+
+  private String addressType = null;
+
+  private String estabType;
+
+  private String orgName;
 }

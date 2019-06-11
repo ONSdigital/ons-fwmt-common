@@ -19,4 +19,6 @@ public class Payload {
 
   private Contact contact;
 
+  private CollectionCase collectionCase;
+
 }

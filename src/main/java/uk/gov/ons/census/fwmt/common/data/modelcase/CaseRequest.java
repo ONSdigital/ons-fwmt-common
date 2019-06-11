@@ -20,6 +20,8 @@ public class CaseRequest {
 
   private String estabType = null;
 
+  private String requiredOfficer = null;
+
   private String coordCode = null;
 
   private Contact contact = null;
@@ -31,8 +33,6 @@ public class CaseRequest {
   private String description = null;
 
   private String specialInstructions = null;
-
-  private String fieldOfficerId = null;
 
   private Boolean uaa = false;
 
