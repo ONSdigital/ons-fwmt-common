@@ -37,9 +37,11 @@ public class ModelCase {
 
   private String specialInstructions = null;
 
-  private Boolean uaa = false;
+  private boolean uaa = false;
 
-  private Boolean sai = false;
+  private boolean blankFormReturned;
+
+  private boolean sai = false;
 
   private CeCaseExtension ce = null;
 
