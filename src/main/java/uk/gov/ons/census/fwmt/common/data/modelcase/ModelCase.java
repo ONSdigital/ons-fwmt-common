@@ -59,7 +59,7 @@ public class ModelCase {
 
     CE("CE"),
 
-    CCS("CCS");
+    CCSPL("CCSPL");
 
     private String value;
 

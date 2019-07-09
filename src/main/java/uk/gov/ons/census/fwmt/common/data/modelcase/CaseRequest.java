@@ -54,7 +54,7 @@ public class CaseRequest {
 
     CE("CE"),
 
-    CCS("CCS");
+    CCSPL("CCSPL");
 
     private String value;
 
