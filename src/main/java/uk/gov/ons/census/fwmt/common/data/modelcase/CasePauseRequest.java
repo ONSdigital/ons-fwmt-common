@@ -14,10 +14,10 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 public class CasePauseRequest extends AbsolutePauseRequest {
 
-  private String id = null;
+  private String id;
 
-  private OffsetDateTime until = null;
+  private OffsetDateTime until;
 
-  private String reason = null;
+  private String reason;
 
 }

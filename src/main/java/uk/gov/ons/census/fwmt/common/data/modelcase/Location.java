@@ -11,9 +11,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Location {
 
-  private Float lat = null;
+  private Float lat;
 
   @JsonProperty("long")
-  private Float _long = null;
+  private Float _long;
 
 }

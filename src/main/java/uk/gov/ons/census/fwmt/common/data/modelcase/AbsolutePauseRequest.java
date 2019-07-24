@@ -12,7 +12,8 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 public class AbsolutePauseRequest {
 
-  private OffsetDateTime until = null;
+  private OffsetDateTime until;
 
-  private String reason = null;
+  private String reason;
+
 }

@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CcsCaseExtension {
 
-  private String questionnaireUrl = null;
+  private String questionnaireUrl;
 
 }

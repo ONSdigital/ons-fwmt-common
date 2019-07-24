@@ -10,58 +10,50 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CaseRequest {
 
-  private String reference = null;
+  private String reference;
 
-  private TypeEnum type = null;
+  private TypeEnum type;
 
-  private String surveyType = null;
+  private String surveyType;
 
-  private String category = null;
+  private String category;
 
-  private String estabType = null;
+  private String estabType;
 
-  private String requiredOfficer = null;
+  private String requiredOfficer;
 
-  private String coordCode = null;
+  private String coordCode;
 
-  private Contact contact = null;
+  private Contact contact;
 
-  private Address address = null;
+  private Address address;
 
-  private Location location = null;
+  private Location location;
 
-  private String description = null;
+  private String description;
 
-  private String specialInstructions = null;
+  private String specialInstructions;
 
   private boolean uaa = false;
 
-  private boolean blankFormReturned;
+  private boolean blankFormReturned = false;
 
   private boolean sai = false;
 
-  private CeCaseExtension ce = null;
+  private CeCaseExtension ce;
 
-  private CcsCaseExtension ccs = null;
+  private CcsCaseExtension ccs;
 
-  private CasePauseRequest pause = null;
+  private CasePauseRequest pause;
 
   /**
    * Case Type.
    */
   public enum TypeEnum {
-    HH("HH"),
-
-    CE("CE"),
-
-    CCSPL("CCSPL"),
-
-    CCSIV("CCSIV");
-
-    private String value;
-
-    TypeEnum(String value) {
-      this.value = value;
-    }
+    HH,
+    CE,
+    CCSPL,
+    CCSIV
   }
+
 }

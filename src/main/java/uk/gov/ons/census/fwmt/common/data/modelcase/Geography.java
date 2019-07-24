@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Geography {
 
-  private String oa = null;
+  private String oa;
 
 }

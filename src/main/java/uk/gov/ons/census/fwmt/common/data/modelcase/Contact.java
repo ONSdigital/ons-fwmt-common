@@ -12,9 +12,9 @@ public class Contact {
 
   private String name = "The Occupier";
 
-  private String organisationName = null;
+  private String organisationName;
 
-  private String phone = null;
+  private String phone;
 
-  private String email = null;
+  private String email;
 }
