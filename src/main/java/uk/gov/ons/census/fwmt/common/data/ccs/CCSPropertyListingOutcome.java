@@ -44,6 +44,12 @@ public class CCSPropertyListingOutcome {
   @ApiModelProperty(notes = "CE details")
   private CeDetails ceDetails;
 
+  @ApiModelProperty(notes = "Coordinator Code (ID), e.g. CAR1_HA")
+  private String coordinatorCode;
+
+  @ApiModelProperty(notes = "Field Officer Code (ID), e.g. CAR1_HA_01")
+  private String fieldOfficerCode;
+
   @ApiModelProperty(notes = "Access/security info")
   private String accessInfo;
 

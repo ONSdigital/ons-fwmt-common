@@ -19,12 +19,8 @@ public class Address {
 
   private String town;
 
-  private String postcode;
+  private String postCode;
 
   private Location location;
-
-  private String coordinatorCode;
-
-  private String fieldOfficerCode;
 
 }

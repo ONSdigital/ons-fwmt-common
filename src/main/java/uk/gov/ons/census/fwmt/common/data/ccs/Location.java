@@ -1,6 +1,5 @@
 package uk.gov.ons.census.fwmt.common.data.ccs;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,9 +13,8 @@ import java.math.BigDecimal;
 @ApiModel
 public class Location {
 
-  private BigDecimal lat;
+  private BigDecimal latitude;
 
-  @JsonProperty("long")
-  private BigDecimal _long;
+  private BigDecimal longitude;
 
 }
