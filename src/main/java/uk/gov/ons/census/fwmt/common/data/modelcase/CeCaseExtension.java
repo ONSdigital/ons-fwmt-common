@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CeCaseExtension {
 
-  private Boolean ce1Complete = null;
+  private Boolean ce1Complete = false;
 
-  private Boolean deliveryRequired = null;
+  private Boolean deliveryRequired = false;
 
-  private Integer expectedResponses = null;
+  private Integer expectedResponses;
 
-  private Integer actualResponses = null;
+  private Integer actualResponses;
 
 }

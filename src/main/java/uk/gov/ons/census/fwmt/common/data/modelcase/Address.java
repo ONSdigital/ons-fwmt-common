@@ -3,7 +3,6 @@ package uk.gov.ons.census.fwmt.common.data.modelcase;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,19 +12,20 @@ import java.util.List;
 @NoArgsConstructor
 public class Address {
 
-  private Long uprn = null;
+  private Long uprn;
 
-  private List<String> lines = new ArrayList<>();
+  private List<String> lines;
 
-  private String town = null;
+  private String town;
 
-  private String postcode = null;
+  private String postcode;
 
-  private Geography geography = null;
+  private Geography geography;
 
-  private String addressType = null;
+  private String addressType;
 
   private String estabType;
 
   private String orgName;
+
 }

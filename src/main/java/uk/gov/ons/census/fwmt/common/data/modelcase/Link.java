@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Link {
 
-  private String rel = null;
+  private String rel;
 
-  private String href = null;
+  private String href;
 
 }

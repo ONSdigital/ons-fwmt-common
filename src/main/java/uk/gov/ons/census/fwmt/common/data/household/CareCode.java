@@ -1,4 +1,4 @@
-package uk.gov.ons.census.fwmt.common.data.comet;
+package uk.gov.ons.census.fwmt.common.data.household;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-
 public class CareCode {
 
   @ApiModelProperty(notes = "Value of an applied care code on the case", required = true)
