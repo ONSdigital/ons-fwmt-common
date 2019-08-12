@@ -9,7 +9,7 @@ plugins {
 
 description = 'census-fwmt-common'
 
-version = '1.0.24-RELEASE'
+version = '1.0.25-SNAPSHOT'
 
 group = 'uk.gov.ons.census.fwmt'
 
