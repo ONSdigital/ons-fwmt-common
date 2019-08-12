@@ -28,7 +28,7 @@ public class HouseholdOutcome {
   private String username;
 
   // Remove from object and instead pass from POST param
-  @ApiModelProperty(notes = "Identifier of the case", required = true)
+  @ApiModelProperty(notes = "Identifier of the case")
   private UUID caseId;
 
   @ApiModelProperty(notes = "Human readable identifier of the case", required = true)
