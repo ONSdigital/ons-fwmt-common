@@ -20,7 +20,7 @@ public class FulfillmentRequest {
 
   @ApiModelProperty(notes = "Scanned from paper app")
   @Size(max = 16)
-  private String questionnaireId;
+  private String questionnaireID;
 
   @ApiModelProperty(notes = "For posting paper I forms (H/H1 can be addressed to household)")
   @Size(max = 20)
