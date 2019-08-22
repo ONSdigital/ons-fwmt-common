@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-public class FulfillmentRequest {
+public class FulfilmentRequest {
 
   @ApiModelProperty(notes = "H1/HC1/I1, plus other values for languages - H4/I4 for NI", required = true)
   @Size(max = 16)

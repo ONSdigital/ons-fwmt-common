@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-public class FulfillmentRequest {
+public class FulfilmentRequest {
 
   @ApiModelProperty(notes = "Scanned from paper app")
   @Size(max = 16)

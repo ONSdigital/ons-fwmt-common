@@ -44,6 +44,6 @@ public class HouseholdOutcome {
   private CeDetails ceDetails;
 
   @ApiModelProperty(notes = "List of Fulfilment Request objects")
-  private List<FulfillmentRequest> fulfillmentRequests = null;
+  private List<FulfilmentRequest> fulfilmentRequests = null;
 
 }
