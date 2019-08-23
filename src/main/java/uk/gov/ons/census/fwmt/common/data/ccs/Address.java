@@ -19,6 +19,8 @@ public class Address {
 
   private String town;
 
+  private String oa;
+
   private String postCode;
 
   private Location location;
