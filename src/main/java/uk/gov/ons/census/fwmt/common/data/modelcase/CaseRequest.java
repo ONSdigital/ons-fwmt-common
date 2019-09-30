@@ -52,8 +52,7 @@ public class CaseRequest {
   public enum TypeEnum {
     HH,
     CE,
-    CCSPL,
-    CCSIV
+    CCS
   }
 
 }
