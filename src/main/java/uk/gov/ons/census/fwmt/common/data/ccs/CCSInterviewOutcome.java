@@ -47,7 +47,7 @@ public class CCSInterviewOutcome {
   private String secondaryOutcome;
 
   @ApiModelProperty(notes = "List of Fulfilment Requests")
-  private List<FulfilmentRequest> fulfillmentRequests = null;
+  private List<FulfillmentRequest> fulfillmentRequests = null;
 
 
 }
