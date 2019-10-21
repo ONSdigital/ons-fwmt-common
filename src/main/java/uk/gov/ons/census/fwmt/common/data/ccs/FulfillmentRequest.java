@@ -16,6 +16,6 @@ public class FulfillmentRequest {
 
   @ApiModelProperty(notes = "Scanned from paper app")
   @Size(max = 16)
-  private String questionnaireId;
+  private String questionnaireID;
 
 }
