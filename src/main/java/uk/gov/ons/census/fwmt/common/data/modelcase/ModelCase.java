@@ -57,8 +57,7 @@ public class ModelCase {
   public enum TypeEnum {
     HH,
     CE,
-    CCSPL,
-    CCSIV
+    CCS
   }
 
 }
