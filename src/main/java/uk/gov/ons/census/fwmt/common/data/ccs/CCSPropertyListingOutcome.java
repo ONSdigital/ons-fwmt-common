@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import uk.gov.ons.census.fwmt.common.data.household.FulfilmentRequest;
 
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
@@ -60,6 +61,6 @@ public class CCSPropertyListingOutcome {
   private List<CareCode> careCodes;
 
   @ApiModelProperty(notes = "List of Fulfilment Requests")
-  private FulfillmentRequest fulfillmentRequests;
+  private List<FulfilmentRequest> fulfillmentRequests = null;
 
 }
