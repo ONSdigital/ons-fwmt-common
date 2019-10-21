@@ -5,9 +5,11 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import uk.gov.ons.census.fwmt.common.data.household.FulfilmentRequest;
 
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -45,6 +47,7 @@ public class CCSInterviewOutcome {
   private String secondaryOutcome;
 
   @ApiModelProperty(notes = "List of Fulfilment Requests")
-  private FulfillmentRequest fulfillmentRequests;
+  private List<FulfillmentRequest> fulfillmentRequests = null;
+
 
 }

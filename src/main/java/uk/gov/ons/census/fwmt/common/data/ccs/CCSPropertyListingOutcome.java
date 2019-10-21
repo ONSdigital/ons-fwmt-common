@@ -60,6 +60,6 @@ public class CCSPropertyListingOutcome {
   private List<CareCode> careCodes;
 
   @ApiModelProperty(notes = "List of Fulfilment Requests")
-  private FulfillmentRequest fulfillmentRequests;
+  private List<FulfillmentRequest> fulfillmentRequests = null;
 
 }
