@@ -18,7 +18,7 @@ public class CeDetails {
   @Size(max = 30)
   private String establishmentType;
 
-  @ApiModelProperty(notes = "Name of the establishment", required = true)
+  @ApiModelProperty(notes = "Name of the establishment")
   @Size(max = 60)
   private String organisationName;
 
