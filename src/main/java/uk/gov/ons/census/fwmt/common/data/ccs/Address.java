@@ -1,6 +1,7 @@
 package uk.gov.ons.census.fwmt.common.data.ccs;
 
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,7 @@ public class Address {
 
   private String postCode;
 
+  @ApiModelProperty(notes = "The Address must include a child Location object")
   private Location location;
 
 }

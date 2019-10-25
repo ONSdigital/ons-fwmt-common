@@ -36,21 +36,25 @@ public class CCSPropertyListingOutcome {
   @ApiModelProperty(notes = "Primary outcome code, e.g. No Valid Household", required = true)
   private String primaryOutcome;
 
-  @ApiModelProperty(notes = "Secondary outcome code, e.g. Derelict")
+  @ApiModelProperty(notes = "Secondary outcome code, e.g. Derelict", required = true)
   private String secondaryOutcome;
 
+  @ApiModelProperty(notes = "The CCSPropertyListingOutcome must include a child Address object", required = true)
   private Address address;
 
-  @ApiModelProperty(notes = "CE details")
-  private CeDetails ceDetails;
-
-  @ApiModelProperty(notes = "Coordinator Code (ID), e.g. CAR1_HA")
+  @ApiModelProperty(notes = "Coordinator Code (ID), e.g. CAR1_HA", required = true)
   private String coordinatorCode;
 
-  @ApiModelProperty(notes = "Field Officer Code (ID), e.g. CAR1_HA_01")
+  @ApiModelProperty(notes = "Field Officer Code (ID), e.g. CAR1_HA_01 \n"
+      + "Duplicate of username, but explicitly called out for clarity in the mapping to the new interview case.",
+  required = true)
   private String fieldOfficerCode;
 
-  @ApiModelProperty(notes = "Access/security info")
+  @ApiModelProperty(notes = "The CCSPropertyListingOutcome may include a child CEDetailobject")
+  private CeDetails ceDetails;
+
+  @ApiModelProperty(notes = "Access/security info - not used for 2019;\n"
+      + " pre-empting the need to be able to create a CE case from a HH case in 2021.")
   private String accessInfo;
 
   @ApiModelProperty(notes = "Care Codes applied to the case, can be 0, 1 or more of:\n"
@@ -59,7 +63,7 @@ public class CCSPropertyListingOutcome {
       + "Caution required")
   private List<CareCode> careCodes;
 
-  @ApiModelProperty(notes = "List of Fulfilment Requests")
+  @ApiModelProperty(notes = "The CCSPropertyListingOutcome may include a child FulfillmentRequest object.")
   private List<FulfillmentRequest> fulfillmentRequests = null;
 
 }
