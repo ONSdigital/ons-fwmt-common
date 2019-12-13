@@ -7,7 +7,7 @@ plugins {
 }
 
 description = 'census-fwmt-common'
-version = '1.0.46-SNAPSHOT'
+version = '1.0.47-SNAPSHOT'
 group = 'uk.gov.ons.census.fwmt'
 sourceCompatibility = 11
 targetCompatibility = 11
