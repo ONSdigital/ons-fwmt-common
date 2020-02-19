@@ -1,13 +1,17 @@
 package uk.gov.ons.census.fwmt.common.data.modelcase;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
  * Case
  */
+@Builder
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class CaseRequest {
 
   private String reference;
@@ -50,6 +54,7 @@ public class CaseRequest {
    * Case Type.
    */
   public enum TypeEnum {
+    SPG_SITE,
     HH,
     CE,
     CCS,

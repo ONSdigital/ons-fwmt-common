@@ -1,16 +1,20 @@
 package uk.gov.ons.census.fwmt.common.data.modelcase;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.util.List;
 import java.util.UUID;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Case
  */
+@Builder
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class ModelCase {
 
   private UUID id;
