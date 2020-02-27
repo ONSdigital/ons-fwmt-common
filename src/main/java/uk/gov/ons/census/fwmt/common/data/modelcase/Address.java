@@ -1,15 +1,19 @@
 package uk.gov.ons.census.fwmt.common.data.modelcase;
 
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 /**
  * Address
  */
+@Builder
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Address {
 
   private Long uprn;
