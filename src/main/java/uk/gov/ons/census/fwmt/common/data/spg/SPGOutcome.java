@@ -63,6 +63,12 @@ public class SPGOutcome {
   @ApiModelProperty(notes = "Access/security info")
   private String accessInfo;
 
+  @ApiModelProperty(notes = "Care Codes applied to the case, can be 0, 1 or more of:\n"
+      + "Access control\n"
+      + "Aggressive animal\n"
+      + "Caution required")
+  private List<CareCode> careCodes;
+
   @ApiModelProperty(notes = "List of fulfillment requests")
   private List<FulfilmentRequest> fulfillmentRequests = null;
 
