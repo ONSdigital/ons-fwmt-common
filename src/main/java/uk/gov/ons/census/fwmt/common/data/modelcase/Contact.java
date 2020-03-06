@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Contact {
 
+  @Builder.Default
   private String name = "The Occupier";
 
   private String organisationName;

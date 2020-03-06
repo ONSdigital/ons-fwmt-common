@@ -16,9 +16,9 @@ public class CaseRequest {
 
   private String reference;
 
-  private TypeEnum type;
+  private Type type;
 
-  private String surveyType;
+  private SurveyType surveyType;
 
   private String category;
 
@@ -38,10 +38,13 @@ public class CaseRequest {
 
   private String specialInstructions;
 
+  @Builder.Default
   private boolean uaa = false;
 
+  @Builder.Default
   private boolean blankFormReturned = false;
 
+  @Builder.Default
   private boolean sai = false;
 
   private CeCaseExtension ce;
@@ -53,12 +56,33 @@ public class CaseRequest {
   /**
    * Case Type.
    */
-  public enum TypeEnum {
-    SPG_SITE,
+  public enum Type {
     HH,
     CE,
     CCS,
-    AC
+    AC;
   }
 
+  public enum SurveyType {
+    HH("HH"),
+    CE_EST("CE EST"),
+    CE_UNIT("CE UNIT"),
+    CCS_PL("CCS PL"),
+    CCS_INT("CCS INT"),
+    AC("AC"),
+    SPG_Site("SPG Site"),
+    SPG_Secure_Site(null),
+    SPG_Unit_D("SPG Unit-D"),
+    SPG_Unit_F("SPG Unit-F");
+
+    public final String name;
+
+    SurveyType(String name) {
+      this.name = name;
+    }
+
+    @Override public String toString() {
+      return name;
+    }
+  }
 }

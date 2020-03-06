@@ -41,10 +41,13 @@ public class ModelCase {
 
   private String specialInstructions;
 
+  @Builder.Default
   private boolean uaa = false;
 
+  @Builder.Default
   private boolean blankFormReturned = false;
 
+  @Builder.Default
   private boolean sai = false;
 
   private CeCaseExtension ce;

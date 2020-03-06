@@ -14,8 +14,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class CeCaseExtension {
 
+  @Builder.Default
   private Boolean ce1Complete = false;
 
+  @Builder.Default
   private Boolean deliveryRequired = false;
 
   private Integer expectedResponses;
