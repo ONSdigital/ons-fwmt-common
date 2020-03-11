@@ -21,7 +21,7 @@ public class ModelCase {
 
   private String reference;
 
-  private TypeEnum type;
+  private CaseType type;
 
   private String surveyType;
 
@@ -57,15 +57,5 @@ public class ModelCase {
   private CasePause pause;
 
   private List<Link> _links;
-
-  /**
-   * Case Type.
-   */
-  public enum TypeEnum {
-    HH,
-    CE,
-    CCS,
-    AC
-  }
 
 }
