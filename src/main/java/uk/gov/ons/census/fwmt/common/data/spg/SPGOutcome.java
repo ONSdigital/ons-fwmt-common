@@ -17,6 +17,9 @@ import java.util.UUID;
 @ApiModel
 public class SPGOutcome {
 
+  @ApiModelProperty(notes = "Case is passed into here in gateway to be used internally", hidden = true)
+  private UUID caseId;
+
   @ApiModelProperty(notes = "Unique identifier for the request", required = true)
   private UUID transactionId;
 
