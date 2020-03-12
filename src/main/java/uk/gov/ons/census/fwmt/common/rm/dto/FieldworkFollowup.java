@@ -12,15 +12,12 @@ import lombok.NoArgsConstructor;
 //  actionInstruction
 //  secureEstablishment
 //  handDeliver
-//  forename
-//  surname
-//  phoneNumber
 //  uaa
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@Builder(toBuilder = true)
 public class FieldworkFollowup {
 
   private String addressLine1;
@@ -54,9 +51,6 @@ public class FieldworkFollowup {
   private String actionInstruction;
   private Boolean secureEstablishment;
   private Boolean handDeliver;
-  private String forename;
-  private String surname;
-  private String phoneNumber;
   private Boolean uaa;
 
 }

@@ -21,7 +21,7 @@ public class ModelCase {
 
   private String reference;
 
-  private TypeEnum type;
+  private CaseType type;
 
   private String surveyType;
 
@@ -41,10 +41,13 @@ public class ModelCase {
 
   private String specialInstructions;
 
+  @Builder.Default
   private boolean uaa = false;
 
+  @Builder.Default
   private boolean blankFormReturned = false;
 
+  @Builder.Default
   private boolean sai = false;
 
   private CeCaseExtension ce;
@@ -54,15 +57,5 @@ public class ModelCase {
   private CasePause pause;
 
   private List<Link> _links;
-
-  /**
-   * Case Type.
-   */
-  public enum TypeEnum {
-    HH,
-    CE,
-    CCS,
-    AC
-  }
 
 }
