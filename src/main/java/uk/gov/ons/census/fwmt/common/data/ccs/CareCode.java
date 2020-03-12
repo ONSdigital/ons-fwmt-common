@@ -12,7 +12,8 @@ import lombok.NoArgsConstructor;
 @ApiModel
 public class CareCode {
 
-  @ApiModelProperty(notes = "Value of an applied care code on the case", required = true)
+  @ApiModelProperty(notes = "Value of an applied care code on the case, an enumeration of Access control,"
+      + " Aggressive animal and Caution required", required = true)
   private String careCode;
 
 }
