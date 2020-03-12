@@ -5,7 +5,6 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import uk.gov.ons.census.fwmt.common.data.shared.CareCode;
 
 import javax.validation.constraints.Size;
 import java.util.List;
