@@ -1,4 +1,4 @@
-package uk.gov.ons.census.fwmt.common.data.spg;
+package uk.gov.ons.census.fwmt.common.data.shared;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

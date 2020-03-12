@@ -13,9 +13,9 @@ import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-public class SPGOutcome extends CommonOutcome {
+public class NewStandaloneAddress extends CommonOutcome {
 
-  @ApiModelProperty(notes = "Identifier to the field officer that accompanied the primary officer")
-  private String accompanyingOfficerId;
+  @ApiModelProperty(notes = "Flag to indicate whether Dummy Information has been collected")
+  private Boolean dummyInfoCollected;
 
 }

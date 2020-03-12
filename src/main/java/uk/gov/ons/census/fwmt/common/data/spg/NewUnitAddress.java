@@ -8,14 +8,17 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
 
+import java.util.UUID;
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-public class SPGOutcome extends CommonOutcome {
+public class NewUnitAddress extends CommonOutcome {
 
-  @ApiModelProperty(notes = "Identifier to the field officer that accompanied the primary officer")
-  private String accompanyingOfficerId;
+  @ApiModelProperty(notes = "The Site case Id (i.e. for SPG Site Id associated to a new Unit Address to be created; "
+      + "if not provided, this shall be assumed to be a new Unlinked Address)")
+  private UUID siteCaseId;
 
 }
