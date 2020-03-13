@@ -7,7 +7,7 @@ plugins {
 
 description = 'census-fwmt-common'
 group = 'uk.gov.ons.census.fwmt'
-version = rootProject.file('version.txt').text.trim()
+version = '1.1.1-SNAPSHOT'
 
 sourceCompatibility = 11
 targetCompatibility = 11

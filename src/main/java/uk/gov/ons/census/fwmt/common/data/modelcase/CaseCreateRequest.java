@@ -12,13 +12,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CaseRequest {
+public class CaseCreateRequest {
 
   private String reference;
 
-  private TypeEnum type;
+  private CaseType type;
 
-  private String surveyType;
+  private SurveyType surveyType;
 
   private String category;
 
@@ -38,10 +38,13 @@ public class CaseRequest {
 
   private String specialInstructions;
 
+  @Builder.Default
   private boolean uaa = false;
 
+  @Builder.Default
   private boolean blankFormReturned = false;
 
+  @Builder.Default
   private boolean sai = false;
 
   private CeCaseExtension ce;
@@ -49,16 +52,5 @@ public class CaseRequest {
   private CcsCaseExtension ccs;
 
   private CasePauseRequest pause;
-
-  /**
-   * Case Type.
-   */
-  public enum TypeEnum {
-    SPG_SITE,
-    HH,
-    CE,
-    CCS,
-    AC
-  }
 
 }
