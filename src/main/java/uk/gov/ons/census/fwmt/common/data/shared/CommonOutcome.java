@@ -37,9 +37,6 @@ public class CommonOutcome {
   @Size(max = 10)
   private String coordinatorId;
 
-  @ApiModelProperty(notes = "Human readable identifier of the case", required = true)
-  private String caseReference;
-
   @ApiModelProperty(notes = "Primary outcome code, e.g. Non Valid Household", required = true)
   private String primaryOutcomeDescription;
 
@@ -49,9 +46,6 @@ public class CommonOutcome {
   @ApiModelProperty(notes = "The full outcome code in computer format (i.e. s-yy-zz); where s is survey type,"
       + " yy is primary and zz is secondary codes", required = true)
   private String outcomeCode;
-
-  @ApiModelProperty(notes = "Populated with the CE SPG details")
-  private CeDetails ceDetails;
 
   @ApiModelProperty(notes = "Address details for case")
   private Address address;
