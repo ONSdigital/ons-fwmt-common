@@ -18,4 +18,7 @@ public class NewStandaloneAddress extends CommonOutcome {
   @ApiModelProperty(notes = "Flag to indicate whether Dummy Information has been collected")
   private Boolean dummyInfoCollected;
 
+  @ApiModelProperty(notes = "Populated with the CE SPG details")
+  private CeDetails ceDetails;
+
 }
