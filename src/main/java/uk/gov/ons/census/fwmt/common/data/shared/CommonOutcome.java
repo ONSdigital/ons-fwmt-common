@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.ons.census.fwmt.common.data.spg.Address;
-import uk.gov.ons.census.fwmt.common.data.spg.CeDetails;
 import uk.gov.ons.census.fwmt.common.data.spg.FulfilmentRequest;
 
 import javax.validation.constraints.Size;
