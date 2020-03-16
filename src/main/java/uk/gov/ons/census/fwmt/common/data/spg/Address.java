@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @ApiModel
 public class Address {
 
-  @ApiModelProperty(notes = "Address line 1")
+  @ApiModelProperty(notes = "Address line 1", required = true)
   private String addressLine1;
 
   @ApiModelProperty(notes = "Address line 2")

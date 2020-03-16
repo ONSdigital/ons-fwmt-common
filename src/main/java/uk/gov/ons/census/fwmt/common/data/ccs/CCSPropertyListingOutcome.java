@@ -64,6 +64,6 @@ public class CCSPropertyListingOutcome {
   private List<CareCode> careCodes;
 
   @ApiModelProperty(notes = "The CCSPropertyListingOutcome may include a child FulfillmentRequest object.")
-  private List<FulfillmentRequest> fulfillmentRequests = null;
+  private List<FulfillmentRequest> fulfilmentRequests = null;
 
 }
