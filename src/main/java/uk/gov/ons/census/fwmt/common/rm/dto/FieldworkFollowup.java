@@ -53,4 +53,16 @@ public class FieldworkFollowup {
   private Boolean handDeliver;
   private Boolean uaa;
 
+  // display only the details related to request routing
+  public String toRoutingString() {
+    return "FieldworkFollowup(" +
+        "actionInstruction=" + this.actionInstruction + ", " +
+        "surveyName=" + this.surveyName + ", " +
+        "addressType=" + this.addressType + ", " +
+        "addressLevel=" + this.addressLevel + ", " +
+        "secureEstablishment=" + this.secureEstablishment + ", " +
+        "handDeliver=" + this.handDeliver + ", " +
+        "uaa=" + this.uaa + ", " +
+        "blankQreReturned=" + this.blankQreReturned + ")";
+  }
 }
