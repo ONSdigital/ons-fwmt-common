@@ -1,5 +1,11 @@
 package uk.gov.ons.census.fwmt.common.data.shared;
 
+import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+
+import javax.validation.constraints.Size;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -7,11 +13,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import uk.gov.ons.census.fwmt.common.data.spg.Address;
 import uk.gov.ons.census.fwmt.common.data.spg.FulfilmentRequest;
-
-import javax.validation.constraints.Size;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -26,7 +27,7 @@ public class CommonOutcome {
   private UUID transactionId;
 
   @ApiModelProperty(notes = "Date/time of the recorded the outcome", example = "2011-08-12T20:17:46.384Z", required = true)
-  private LocalDateTime eventDate;
+  private Date eventDate;
 
   @ApiModelProperty(notes = "Identifier of the field officer that recorded the outcome", required = true)
   @Size(max = 10)
