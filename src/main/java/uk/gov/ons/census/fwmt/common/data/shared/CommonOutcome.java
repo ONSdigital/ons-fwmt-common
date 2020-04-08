@@ -60,6 +60,6 @@ public class CommonOutcome {
   private List<CareCode> careCodes;
 
   @ApiModelProperty(notes = "List of fulfillment requests")
-  private List<FulfilmentRequest> fulfillmentRequests = null;
+  private List<FulfilmentRequest> fulfilmentRequests = null;
 
 }
