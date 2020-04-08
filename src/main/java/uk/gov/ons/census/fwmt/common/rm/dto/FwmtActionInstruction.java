@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder(toBuilder = true)
-public class ActionInstruction {
+public class FwmtActionInstruction {
   private ActionInstructionType actionInstruction;
   private String surveyName;
   private String addressType;
@@ -40,7 +40,6 @@ public class ActionInstruction {
   @JsonInclude(JsonInclude.Include.NON_NULL)
   private Boolean secureEstablishment;
 
-
   // display only the details related to request routing
   public String toRoutingString() {
     return "FieldworkFollowup(" +
@@ -50,7 +49,7 @@ public class ActionInstruction {
         "addressLevel=" + this.addressLevel + ", " +
         "secureEstablishment=" + this.secureEstablishment + ", " +
         "handDeliver=" + this.handDeliver + ", " +
-        "uaa=" + this.uaa + ", " +
-        "blankQreReturned=" + this.blankQreReturned + ")";
+        "undeliveredAsAddress=" + this.undeliveredAsAddress + ", " +
+        "blankFormReturned=" + this.blankFormReturned + ")";
   }
 }
