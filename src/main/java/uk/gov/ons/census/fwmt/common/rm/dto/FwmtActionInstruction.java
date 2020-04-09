@@ -2,20 +2,19 @@ package uk.gov.ons.census.fwmt.common.rm.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder(toBuilder = true)
-public class FwmtActionInstruction {
-  private ActionInstructionType actionInstruction;
-  private String surveyName;
+@SuperBuilder(toBuilder = true)
+public class FwmtActionInstruction extends FwmtSuperInstruction {
   private String addressType;
   private String addressLevel;
-  private String caseId;
   private String caseRef;
   private String estabType;
   private String fieldOfficerId;
