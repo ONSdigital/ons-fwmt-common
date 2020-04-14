@@ -1,17 +1,21 @@
 package uk.gov.ons.census.fwmt.common.rm.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Data
-public class FwmtCancelActionInstruction {
-  private ActionInstructionType actionInstruction;
-  private String surveyName;
+@EqualsAndHashCode(callSuper = true)
+@AllArgsConstructor
+@NoArgsConstructor
+@SuperBuilder(toBuilder = true)
+public class FwmtCancelActionInstruction extends FwmtSuperInstruction {
   private String addressType;
   private String addressLevel;
-  private String caseId;
   private Integer ceExpectedCapacity;
   private Integer ceActualResponses;
-
 
   // display only the details related to request routing
   public String toRoutingString() {
