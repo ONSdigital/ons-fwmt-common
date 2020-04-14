@@ -27,7 +27,7 @@ public class Address {
   private String locality;
 
   @ApiModelProperty(notes = "Postcode")
-  private String postCode;
+  private String postcode;
 
   @ApiModelProperty(notes = "Latitude", required = true)
   private BigDecimal latitude;
