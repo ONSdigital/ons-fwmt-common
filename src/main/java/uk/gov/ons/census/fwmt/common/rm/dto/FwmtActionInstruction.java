@@ -12,6 +12,7 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder(toBuilder = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class FwmtActionInstruction extends FwmtSuperInstruction {
   private String addressType;
   private String addressLevel;
@@ -29,15 +30,13 @@ public class FwmtActionInstruction extends FwmtSuperInstruction {
   private String oa;
   private Double latitude;
   private Double longitude;
-  private boolean ce1Complete;
-  private boolean handDeliver;
-  private Integer ceExpectedCapacity;
-  private Integer ceActualResponses;
-  private Boolean undeliveredAsAddress;
-  private Boolean blankFormReturned;
-
-  @JsonInclude(JsonInclude.Include.NON_NULL)
-  private Boolean secureEstablishment;
+  private boolean ce1Complete = false;
+  private boolean handDeliver = false;
+  private Integer ceExpectedCapacity = 0;
+  private Integer ceActualResponses = 0;
+  private boolean undeliveredAsAddress = false;
+  private boolean blankFormReturned = false;
+  private boolean secureEstablishment = false;
 
   // display only the details related to request routing
   public String toRoutingString() {
