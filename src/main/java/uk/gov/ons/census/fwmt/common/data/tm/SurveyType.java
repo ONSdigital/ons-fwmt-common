@@ -1,6 +1,5 @@
-package uk.gov.ons.census.fwmt.common.data.modelcase;
+package uk.gov.ons.census.fwmt.common.data.tm;
 
-@Deprecated
 public enum SurveyType {
   HH("HH"),
   CE_EST("CE EST"),

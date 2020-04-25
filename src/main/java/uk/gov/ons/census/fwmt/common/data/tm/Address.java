@@ -1,36 +1,21 @@
-package uk.gov.ons.census.fwmt.common.data.modelcase;
+package uk.gov.ons.census.fwmt.common.data.tm;
 
-import java.util.List;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Address
- */
-@Builder
+import java.util.List;
+
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Deprecated
 public class Address {
-
   private Long uprn;
-
-  private List<String> lines;
-
+  @JsonProperty(required = true) private List<String> lines;
   private String town;
-
   private String postcode;
-
   private Geography geography;
-
-  private String addressType;
-
-  private String estabType;
-
-  private String orgName;
-
 }

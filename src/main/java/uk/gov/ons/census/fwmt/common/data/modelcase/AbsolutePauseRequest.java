@@ -10,6 +10,7 @@ import java.time.OffsetDateTime;
  */
 @Data
 @NoArgsConstructor
+@Deprecated
 public class AbsolutePauseRequest {
 
   private OffsetDateTime until;
