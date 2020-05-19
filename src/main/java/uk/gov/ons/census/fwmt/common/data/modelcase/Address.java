@@ -19,6 +19,8 @@ public class Address {
 
   private Long uprn;
 
+  private Long estabUprn;
+
   private List<String> lines;
 
   private String town;

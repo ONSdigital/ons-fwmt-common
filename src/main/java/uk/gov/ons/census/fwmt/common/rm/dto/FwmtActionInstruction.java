@@ -22,6 +22,7 @@ public class FwmtActionInstruction extends FwmtSuperInstruction {
   private String fieldCoordinatorId;
   private String organisationName;
   private String uprn;
+  private String estabUprn;
   private String addressLine1;
   private String addressLine2;
   private String addressLine3;
