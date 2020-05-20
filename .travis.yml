@@ -3,7 +3,7 @@ jdk: openjdk11
 install: true
 script:
 - |
-  - echo "AU entry:${ARTIFACTORY_USERNAME}""
+  - echo "AU entry:${ARTIFACTORY_USERNAME}" ${ARTIFACTORY_USERNAME}
   if [[ $TRAVIS_COMMIT_MESSAGE != 'CONCOURSE SNAPSHOT UPDATE' ]]; then
     - echo "artifactory_user=${ARTIFACTORY_USERNAME}" >> ~/.gradle/gradle.properties
     - echo "artifactory_password=${ARTIFACTORY_PASSWORD}" >> ~/.gradle/gradle.properties
