@@ -1,9 +1,8 @@
-package uk.gov.ons.census.fwmt.common.data.modelcase;
+package uk.gov.ons.census.fwmt.common.data.tm;
 
 /**
  * Case Type.
  */
-@Deprecated
 public enum CaseType {
   HH,
   CE,

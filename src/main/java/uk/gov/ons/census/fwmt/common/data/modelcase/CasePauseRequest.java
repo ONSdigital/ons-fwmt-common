@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
+@Deprecated
 public class CasePauseRequest extends AbsolutePauseRequest {
 
   private String id;

@@ -1,24 +1,20 @@
-package uk.gov.ons.census.fwmt.common.data.modelcase;
+package uk.gov.ons.census.fwmt.common.data.tm;
 
-import java.time.OffsetDateTime;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Case pause
- */
-@Builder
+import java.time.OffsetDateTime;
+import java.util.List;
+
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Deprecated
 public class CasePause {
-
   private OffsetDateTime until;
-
   private String reason;
-
+  private List<Link> _links;
 }

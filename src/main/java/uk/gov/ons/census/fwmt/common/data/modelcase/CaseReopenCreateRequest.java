@@ -5,6 +5,7 @@ import lombok.Data;
 
 @Data
 @Builder
+@Deprecated
 public class CaseReopenCreateRequest {
   private final String id;
   private final SurveyType surveyType;

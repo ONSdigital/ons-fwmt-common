@@ -1,25 +1,16 @@
-package uk.gov.ons.census.fwmt.common.data.modelcase;
+package uk.gov.ons.census.fwmt.common.data.tm;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Location
- */
-@Builder
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Deprecated
 public class Location {
-
-  private Float lat;
-
-  @JsonProperty("long")
-  private Float _long;
-
+  @JsonProperty(required = true) private Float lat;
+  @JsonProperty(value = "long", required = true) private Float _long;
 }
