@@ -3,7 +3,11 @@ package uk.gov.ons.census.fwmt.common.data.tm;
 public enum SurveyType {
   HH("HH"),
   CE_EST("CE EST"),
+  CE_EST_D("CE Est-D"),
+  CE_EST_F("CE Est-D"),
   CE_UNIT("CE UNIT"),
+  CE_UNIT_D("CE Unit-D"),
+  CE_UNIT_F("CE Unit-F"),
   CCS_PL("CCS PL"),
   CCS_INT("CCS INT"),
   AC("AC"),
