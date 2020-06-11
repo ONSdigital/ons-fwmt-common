@@ -14,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Address {
   private Long uprn;
+  private Long estabUprn;
   @JsonProperty(required = true) private List<String> lines;
   private String town;
   private String postcode;

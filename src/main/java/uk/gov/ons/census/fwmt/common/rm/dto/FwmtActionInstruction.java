@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
+import uk.gov.ons.census.fwmt.common.data.tm.SurveyType;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -38,6 +39,8 @@ public class FwmtActionInstruction extends FwmtSuperInstruction {
   private boolean undeliveredAsAddress = false;
   private boolean blankFormReturned = false;
   private boolean secureEstablishment = false;
+  private SurveyType surveyType;
+
 
   // display only the details related to request routing
   public String toRoutingString() {
