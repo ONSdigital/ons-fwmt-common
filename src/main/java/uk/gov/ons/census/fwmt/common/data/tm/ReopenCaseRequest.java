@@ -5,11 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class ReopenCaseRequest {
+  private String id;
   private SurveyType surveyType;
   private Boolean blank;
   private Boolean uaa;

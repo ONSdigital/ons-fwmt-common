@@ -5,5 +5,6 @@ public enum ActionInstructionType {
   UPDATE,
   PAUSE,
   REACTIVATE,
-  CANCEL
+  CANCEL,
+  SWITCH_CE_TYPE
 }
