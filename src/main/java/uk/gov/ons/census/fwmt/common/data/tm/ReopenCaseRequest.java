@@ -5,8 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
 @Data
 @Builder
 @NoArgsConstructor
@@ -16,4 +14,5 @@ public class ReopenCaseRequest {
   private SurveyType surveyType;
   private Boolean blank;
   private Boolean uaa;
+  private CeCaseExtension ce;
 }
