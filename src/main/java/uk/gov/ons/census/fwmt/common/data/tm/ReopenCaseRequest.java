@@ -14,5 +14,4 @@ public class ReopenCaseRequest {
   private SurveyType surveyType;
   private Boolean blank;
   private Boolean uaa;
-  private CeCaseExtension ce;
 }
