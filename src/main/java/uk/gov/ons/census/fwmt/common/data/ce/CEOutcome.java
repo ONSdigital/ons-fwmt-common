@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
-import uk.gov.ons.census.fwmt.common.data.shared.CeDetails;
+import uk.gov.ons.census.fwmt.common.data.spg.CeDetails;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
