@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import uk.gov.ons.census.fwmt.common.data.shared.CeDetails;
 import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
 
 @EqualsAndHashCode(callSuper = true)
@@ -13,7 +14,7 @@ import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-public class NewStandaloneAddress extends CommonOutcome {
+public class SPGNewStandaloneAddress extends CommonOutcome {
 
   @ApiModelProperty(notes = "Flag to indicate whether Dummy Information has been collected")
   private Boolean dummyInfoCollected;

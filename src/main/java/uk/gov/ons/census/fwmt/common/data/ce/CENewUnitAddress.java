@@ -1,4 +1,4 @@
-package uk.gov.ons.census.fwmt.common.data.spg;
+package uk.gov.ons.census.fwmt.common.data.ce;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -15,7 +15,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-public class NewUnitAddress extends CommonOutcome {
+public class CENewUnitAddress extends CommonOutcome {
 
   @ApiModelProperty(notes = "The Site case Id (i.e. for SPG Site Id associated to a new Unit Address to be created; "
       + "if not provided, this shall be assumed to be a new Unlinked Address)")
