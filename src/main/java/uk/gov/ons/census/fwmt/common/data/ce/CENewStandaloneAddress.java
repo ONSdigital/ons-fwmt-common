@@ -14,12 +14,13 @@ import uk.gov.ons.census.fwmt.common.data.shared.CeDetails;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-public class CEOutcome extends CommonOutcome {
+public class CENewStandaloneAddress extends CommonOutcome {
 
-  @ApiModelProperty(notes = "Identifier to the field officer that accompanied the primary officer")
-  private String accompanyingOfficerId;
+  @ApiModelProperty(notes = "Flag to indicate whether Dummy Information has been collected")
+  private Boolean dummyInfoCollected;
 
   @ApiModelProperty(notes = "Populated with the CE SPG details")
   private CeDetails ceDetails;
 
 }
+
