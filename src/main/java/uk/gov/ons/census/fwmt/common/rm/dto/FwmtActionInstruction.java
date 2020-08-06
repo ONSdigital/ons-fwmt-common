@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import uk.gov.ons.census.fwmt.common.data.tm.SurveyType;
 
+import java.sql.Timestamp;
+
 @Data
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
@@ -40,6 +42,9 @@ public class FwmtActionInstruction extends FwmtSuperInstruction {
   private boolean blankFormReturned = false;
   private boolean secureEstablishment = false;
   private SurveyType surveyType;
+  private String pauseCode;
+  private Timestamp pauseFrom;
+  private String pauseReason;
 
 
   // display only the details related to request routing
