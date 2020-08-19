@@ -1,21 +1,23 @@
 package uk.gov.ons.census.fwmt.common.data.tm;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-import uk.gov.ons.census.fwmt.common.data.modelcase.AbsolutePauseRequest;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.OffsetDateTime;
+import java.sql.Timestamp;
 
 /**
- * Pause to apply to a case, the pause can be derived from a Code or an Absolute date.
+ * Pause to apply to a case.
  */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class CasePauseRequest {
-  @JsonProperty(required = true) private OffsetDateTime until;
+  @JsonProperty(required = true)
+  private String code;
+  private Timestamp effectiveFrom;
   private String reason;
-  @JsonProperty(required = true) private String code;
-  private OffsetDateTime effectiveFrom;
 }
