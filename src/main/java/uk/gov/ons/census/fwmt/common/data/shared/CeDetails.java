@@ -22,6 +22,9 @@ public class CeDetails {
   @Size(max = 30)
   private String establishmentType;
 
+  @ApiModelProperty(notes = "Establishment is a secure type", required = true)
+  private boolean establishmentSecure;
+
   @ApiModelProperty(notes = "Title of the CE Manager e.g. Mr, Mrs - only used to add to case created in RM,"
       + " hence not needed to be  broken down to title, forename, surname.")
   @Size(max = 20)
