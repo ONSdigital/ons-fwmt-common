@@ -14,15 +14,15 @@ import javax.validation.constraints.Size;
 @ApiModel
 public class CeDetails {
 
-  @ApiModelProperty(notes = "Name of the CE", required = true)
+  @ApiModelProperty(notes = "Name of the CE")
   @Size(max = 60)
   private String establishmentName;
 
-  @ApiModelProperty(notes = "Type of the establishment", required = true)
+  @ApiModelProperty(notes = "Type of the establishment")
   @Size(max = 30)
   private String establishmentType;
 
-  @ApiModelProperty(notes = "Establishment is a secure type", required = true)
+  @ApiModelProperty(notes = "Establishment is a secure type")
   private boolean establishmentSecure;
 
   @ApiModelProperty(notes = "Title of the CE Manager e.g. Mr, Mrs - only used to add to case created in RM,"
