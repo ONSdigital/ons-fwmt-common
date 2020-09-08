@@ -1,14 +1,16 @@
 package uk.gov.ons.census.fwmt.common.rm.dto;
 
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 import uk.gov.ons.census.fwmt.common.data.tm.SurveyType;
-
-import java.sql.Timestamp;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -43,7 +45,10 @@ public class FwmtActionInstruction extends FwmtSuperInstruction {
   private boolean secureEstablishment = false;
   private SurveyType surveyType;
   private String pauseCode;
-  private Timestamp pauseFrom;
+
+  @JsonFormat
+  (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX")
+  private Date pauseFrom;
   private String pauseReason;
 
 
