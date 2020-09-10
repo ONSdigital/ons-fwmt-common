@@ -3,6 +3,7 @@ package uk.gov.ons.census.fwmt.common.data.modelcase;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.time.OffsetDateTime;
 

@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 import uk.gov.ons.census.fwmt.common.data.tm.SurveyType;
 
@@ -18,6 +19,7 @@ import uk.gov.ons.census.fwmt.common.data.tm.SurveyType;
 @NoArgsConstructor
 @SuperBuilder(toBuilder = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@ToString(callSuper = true)
 public class FwmtActionInstruction extends FwmtSuperInstruction {
   private String addressType;
   private String addressLevel;

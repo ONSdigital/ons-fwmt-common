@@ -11,11 +11,13 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
+@ToString
 public class CommonOutcome {
 
   @ApiModelProperty(notes = "Case is passed into here in gateway to be used internally", hidden = true)

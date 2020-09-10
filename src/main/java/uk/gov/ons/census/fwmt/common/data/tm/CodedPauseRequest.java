@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.time.OffsetDateTime;
 
@@ -15,6 +16,7 @@ import java.time.OffsetDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class CodedPauseRequest {
   @JsonProperty(required = true) private String code;
   @JsonProperty(required = true) private OffsetDateTime effectiveFrom;

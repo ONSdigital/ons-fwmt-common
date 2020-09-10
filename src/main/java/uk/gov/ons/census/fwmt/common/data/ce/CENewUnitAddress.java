@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import uk.gov.ons.census.fwmt.common.data.shared.CeDetails;
 import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
 
@@ -16,6 +17,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
+@ToString(callSuper = true)
 public class CENewUnitAddress extends CommonOutcome {
 
   @ApiModelProperty(notes = "The Site case Id (i.e. for SPG Site Id associated to a new Unit Address to be created; "
