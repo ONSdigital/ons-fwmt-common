@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * Pause to apply to a case.
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class CasePauseRequest {
   @JsonProperty(required = true)
   private String code;

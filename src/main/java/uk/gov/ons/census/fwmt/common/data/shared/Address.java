@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
@@ -12,6 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
+@ToString
 public class Address {
 
   @ApiModelProperty(notes = "Address line 1", required = true)

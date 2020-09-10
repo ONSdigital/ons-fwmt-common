@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
+@ToString
 public class CCSPropertyListingOutcome {
 
   @ApiModelProperty(notes = "Unique identifier for the request", required = true)
