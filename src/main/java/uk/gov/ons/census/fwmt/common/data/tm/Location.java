@@ -13,6 +13,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Location {
-  @JsonProperty(required = true) private Float lat;
-  @JsonProperty(value = "long", required = true) private Float _long;
+
+  @JsonProperty(required = true)
+  private Double lat;
+  @JsonProperty(value = "long", required = true)
+  private Double _long;
+
 }
