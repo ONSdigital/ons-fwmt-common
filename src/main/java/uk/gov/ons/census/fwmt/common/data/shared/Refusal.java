@@ -32,5 +32,4 @@ public class Refusal {
   @ApiModelProperty(notes = "")
   private boolean dangerous;
 
-
 }
