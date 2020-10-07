@@ -8,6 +8,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
+import uk.gov.ons.census.fwmt.common.data.shared.Refusal;
 
 import java.util.UUID;
 
@@ -21,5 +22,8 @@ public class HHNewSplitAddress extends CommonOutcome {
 
   @ApiModelProperty(notes = "The original case Id that has/will be split ")
   private UUID originatingCaseId;
+
+  @ApiModelProperty(notes = "Refusal object")
+  private Refusal refusal;
 
 }

@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import uk.gov.ons.census.fwmt.common.data.shared.CeDetails;
 import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
+import uk.gov.ons.census.fwmt.common.data.shared.Refusal;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -23,5 +24,8 @@ public class HHOutcome extends CommonOutcome {
 
   @ApiModelProperty(notes = "Populated with the CE SPG details")
   private CeDetails ceDetails;
+
+  @ApiModelProperty(notes = "Refusal object")
+  private Refusal refusal;
 
 }
