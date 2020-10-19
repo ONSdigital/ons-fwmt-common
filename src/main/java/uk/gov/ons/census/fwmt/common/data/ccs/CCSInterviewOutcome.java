@@ -11,6 +11,8 @@ import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
+import uk.gov.ons.census.fwmt.common.data.shared.CeDetails;
+import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
 
 @Data
 @AllArgsConstructor
@@ -43,12 +45,12 @@ public class CCSInterviewOutcome {
 
   @ApiModelProperty(notes = "Primary outcome code, e.g. No Valid Household", required = true)
   private String primaryOutcome;
+public class CCSInterviewOutcome extends CommonOutcome {
 
-  @ApiModelProperty(notes = "Secondary outcome code, e.g. Derelict")
-  private String secondaryOutcome;
+  @ApiModelProperty(notes = "Flag to indicate whether Dummy Information has been collected")
+  private Boolean dummyInfoCollected;
 
-  @ApiModelProperty(notes = "List of Fulfilment Requests")
-  private List<FulfillmentRequest> fulfilmentRequests = null;
-
+  @ApiModelProperty(notes = "Populated with the CE SPG details")
+  private CeDetails ceDetails;
 
 }
