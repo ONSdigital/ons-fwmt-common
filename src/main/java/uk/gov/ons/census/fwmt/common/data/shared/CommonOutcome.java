@@ -23,6 +23,9 @@ public class CommonOutcome {
   @ApiModelProperty(notes = "Case is passed into here in gateway to be used internally", hidden = true)
   private UUID caseId;
 
+  @ApiModelProperty(notes = "Case is passed into here in gateway to be used internally", hidden = true)
+  private String caseRef;
+
   @ApiModelProperty(notes = "Unique identifier for the request", required = true)
   private UUID transactionId;
 
