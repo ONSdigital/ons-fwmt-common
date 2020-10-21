@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.UUID;
+
 import uk.gov.ons.census.fwmt.common.data.shared.CeDetails;
 import uk.gov.ons.census.fwmt.common.data.shared.CommonOutcome;
 import uk.gov.ons.census.fwmt.common.data.shared.FulfilmentRequest;
@@ -28,4 +30,9 @@ public class CCSPropertyListingOutcome extends CommonOutcome {
   @ApiModelProperty(notes = "The CCSPropertyListingOutcome may include a child FulfillmentRequest object.")
   private List<FulfilmentRequest> fulfilmentRequests = null;
 
+  @ApiModelProperty(notes = "The Site case Id")
+  private UUID siteCaseId;
+
+
+  
 }
