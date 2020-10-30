@@ -50,6 +50,4 @@ public class CeDetails {
   @ApiModelProperty(notes = "Number of bedspaces")
   private String bedspaces;
 
-
-
 }
