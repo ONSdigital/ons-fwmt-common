@@ -47,4 +47,7 @@ public class CeDetails {
   @Size(max = 13)
   private String contactPhone;
 
+  @ApiModelProperty(notes = "Number of bedspaces")
+  private String bedspaces;
+
 }
