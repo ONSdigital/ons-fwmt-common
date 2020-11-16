@@ -5,6 +5,7 @@ package uk.gov.ons.census.fwmt.common.data.tm;
  */
 public enum CaseType {
   HH,
+  NC,
   CE,
   CCS,
   AC;

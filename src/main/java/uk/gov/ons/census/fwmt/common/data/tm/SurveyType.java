@@ -2,6 +2,7 @@ package uk.gov.ons.census.fwmt.common.data.tm;
 
 public enum SurveyType {
   HH("HH"),
+  NC("NC"),
   CE_EST("CE EST"),
   CE_EST_D("CE Est-D"),
   CE_EST_F("CE Est-F"),
