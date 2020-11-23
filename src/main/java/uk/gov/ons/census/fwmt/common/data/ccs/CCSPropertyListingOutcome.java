@@ -33,6 +33,4 @@ public class CCSPropertyListingOutcome extends CommonOutcome {
   @ApiModelProperty(notes = "The Site case Id")
   private UUID siteCaseId;
 
-
-  
 }

@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-@ToString
+@ToString(exclude = {"requesterTitle", "requesterForename", "requesterSurname", "requesterPhone"})
 public class FulfilmentRequest {
 
   @ApiModelProperty(notes = "H1/HC1/I1, plus other values for languages - H4/I4 for NI (Not set if a linked QID)")

@@ -17,7 +17,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-@ToString
+@ToString(exclude = {"accessInfo"})
 public class CommonOutcome {
 
   @ApiModelProperty(notes = "Case is passed into here in gateway to be used internally", hidden = true)

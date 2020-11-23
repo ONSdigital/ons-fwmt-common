@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-@ToString
+@ToString(exclude = {"addressLine1", "addressLine2", "addressLine3", "latitude", "longitude"})
 public class Address {
 
   @ApiModelProperty(notes = "Address line 1", required = true)

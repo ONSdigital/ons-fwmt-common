@@ -10,7 +10,7 @@ import lombok.ToString;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(exclude = {"name", "phone", "email"})
 public class Contact {
   @Builder.Default private String name = "The Occupier";
   private String organisationName;
