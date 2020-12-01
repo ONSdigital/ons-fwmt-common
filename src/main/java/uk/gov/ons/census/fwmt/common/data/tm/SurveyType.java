@@ -17,7 +17,6 @@ public enum SurveyType {
   SPG_Secure_Site(null),
   SPG_Unit_D("SPG Unit-D"),
   SPG_Unit_F("SPG Unit-F");
-
   public final String name;
 
   SurveyType(String name) {
