@@ -24,7 +24,6 @@ public class CENewUnitAddress extends CommonOutcome {
       + "if not provided, this shall be assumed to be a new Unlinked Address)")
   private UUID siteCaseId;
 
-  @ApiModelProperty(notes = "Populated with the CE details")
   private CeDetails ceDetails;
 
 }
