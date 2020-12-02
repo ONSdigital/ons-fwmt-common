@@ -47,6 +47,7 @@ public class FwmtActionInstruction extends FwmtSuperInstruction {
   private boolean secureEstablishment = false;
   private SurveyType surveyType;
   private String pauseCode;
+  private boolean nc = false;
 
   @JsonFormat
   (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX")
