@@ -13,7 +13,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(exclude = {"accessInformation"})
 public class CaseAccessInformation {
   private UUID id;
   private UUID formResultId;

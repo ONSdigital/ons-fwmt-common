@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-@ToString
+@ToString(exclude = {"managerTitle","managerForename","managerSurname","contactPhone"})
 public class CeDetails {
 
   @ApiModelProperty(notes = "Name of the CE")
