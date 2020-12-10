@@ -24,7 +24,7 @@ public class Refusal {
   private String surname;
 
   @ApiModelProperty(notes = "")
-  private String middlename;
+  private String middlenames;
 
   @ApiModelProperty(notes = "")
   private boolean householder;
