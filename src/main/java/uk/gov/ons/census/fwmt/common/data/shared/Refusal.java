@@ -11,7 +11,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-@ToString(exclude = {"title", "firstname", "surname", "middlename"})
+@ToString(exclude = {"title", "firstname", "surname", "middlenames"})
 public class Refusal {
 
   @ApiModelProperty(notes = "")
