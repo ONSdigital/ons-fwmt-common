@@ -50,8 +50,8 @@ public class FwmtActionInstruction extends FwmtSuperInstruction {
   private boolean nc = false;
 
   @JsonFormat
-  (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX")
-  private Date pauseFrom;
+  (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+  private String pauseFrom;
   private String pauseReason;
 
 
