@@ -14,7 +14,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(exclude = {"caseAccessInformations"})
 public class CeCase {
   private UUID id;
   private Integer priority;

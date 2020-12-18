@@ -18,6 +18,7 @@ public class FwmtCancelActionInstruction extends FwmtSuperInstruction {
   private String addressLevel;
   private Integer ceExpectedCapacity;
   private Integer ceActualResponses;
+  private boolean nc = false;
 
   // display only the details related to request routing
   public String toRoutingString() {

@@ -21,6 +21,6 @@ import lombok.ToString;
 public class CasePauseRequest {
   @JsonProperty(required = true)
   private String code;
-  private Date effectiveFrom;
+  private String effectiveFrom;
   private String reason;
 }

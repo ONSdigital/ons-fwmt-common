@@ -19,7 +19,7 @@ import uk.gov.ons.census.fwmt.common.data.tm.SurveyType;
 @NoArgsConstructor
 @SuperBuilder(toBuilder = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@ToString(callSuper = true)
+@ToString(callSuper = true, exclude = {"addressLine1", "addressLine2", "addressLine3", "latitude", "longitude" })
 public class FwmtActionInstruction extends FwmtSuperInstruction {
   private String addressType;
   private String addressLevel;
@@ -47,10 +47,11 @@ public class FwmtActionInstruction extends FwmtSuperInstruction {
   private boolean secureEstablishment = false;
   private SurveyType surveyType;
   private String pauseCode;
+  private boolean nc = false;
 
   @JsonFormat
-  (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX")
-  private Date pauseFrom;
+  (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+  private String pauseFrom;
   private String pauseReason;
 
 

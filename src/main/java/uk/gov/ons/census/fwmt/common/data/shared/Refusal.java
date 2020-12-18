@@ -11,7 +11,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel
-@ToString
+@ToString(exclude = {"title", "firstname", "surname", "middlenames"})
 public class Refusal {
 
   @ApiModelProperty(notes = "")
@@ -24,7 +24,7 @@ public class Refusal {
   private String surname;
 
   @ApiModelProperty(notes = "")
-  private String middlename;
+  private String middlenames;
 
   @ApiModelProperty(notes = "")
   private boolean householder;

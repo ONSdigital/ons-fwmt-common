@@ -2,6 +2,7 @@ package uk.gov.ons.census.fwmt.common.data.tm;
 
 public enum SurveyType {
   HH("HH"),
+  NC("NC"),
   CE_EST("CE EST"),
   CE_EST_D("CE Est-D"),
   CE_EST_F("CE Est-F"),
@@ -16,7 +17,6 @@ public enum SurveyType {
   SPG_Secure_Site(null),
   SPG_Unit_D("SPG Unit-D"),
   SPG_Unit_F("SPG Unit-F");
-
   public final String name;
 
   SurveyType(String name) {
