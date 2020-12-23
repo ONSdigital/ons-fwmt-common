@@ -9,13 +9,12 @@ import java.util.UUID;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CaseDetailsDTO {
+public class RefusalContact {
 
-  @JsonProperty("id")
-  private UUID caseId;
+  private String title;
 
-  List<CaseDetailsEventDTO> events;
+  private String forename;
 
-  private RefusalTypeDTO refusalReceived;
+  private String surname;
 
 }
