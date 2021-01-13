@@ -30,6 +30,6 @@ public class Refusal {
   private boolean householder;
 
   @ApiModelProperty(notes = "")
-  private boolean dangerous;
+  private boolean dangerous = false;
 
 }
