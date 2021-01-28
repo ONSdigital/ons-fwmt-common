@@ -13,7 +13,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(exclude = {"lines"})
+@ToString(exclude = {"uprn", "estabUprn","lines"})
 public class Address {
   private Long uprn;
   private Long estabUprn;

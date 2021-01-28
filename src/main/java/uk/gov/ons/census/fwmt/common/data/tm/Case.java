@@ -14,7 +14,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
+@ToString(exclude = {"location", "description", "specialInstructions", "ccs"})
 public class Case {
   private UUID id;
   private Integer priority;
