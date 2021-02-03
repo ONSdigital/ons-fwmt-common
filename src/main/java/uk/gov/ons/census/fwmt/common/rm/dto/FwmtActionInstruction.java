@@ -19,8 +19,8 @@ import uk.gov.ons.census.fwmt.common.data.tm.SurveyType;
 @NoArgsConstructor
 @SuperBuilder(toBuilder = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@ToString(callSuper = true, exclude = {"addressLine1", "addressLine2", "addressLine3", "latitude", "longitude" })
-public class FwmtActionInstruction extends FwmtSuperInstruction {
+@ToString(callSuper = true, exclude = {"addressLine1", "addressLine2", "addressLine3", "latitude", "longitude"})
+public class FwmtActionInstruction extends FwmtSuperInstruction implements FwmtCommonInstruction {
   private String addressType;
   private String addressLevel;
   private String caseRef;
@@ -51,10 +51,9 @@ public class FwmtActionInstruction extends FwmtSuperInstruction {
   private String oldCaseId;
 
   @JsonFormat
-  (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+      (shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
   private String pauseFrom;
   private String pauseReason;
-
 
   // display only the details related to request routing
   public String toRoutingString() {

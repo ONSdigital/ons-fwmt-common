@@ -13,7 +13,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @SuperBuilder(toBuilder = true)
 @ToString(callSuper = true)
-public class FwmtCancelActionInstruction extends FwmtSuperInstruction {
+public class FwmtCancelActionInstruction extends FwmtSuperInstruction implements FwmtCommonInstruction{
   private String addressType;
   private String addressLevel;
   private Integer ceExpectedCapacity;
