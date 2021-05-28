@@ -5,7 +5,7 @@ plugins {
     id 'com.jfrog.artifactory' version '4.13.0'
 }
 
-description = 'ons-fwmt-common'
+description = 'census-fwmt-common'
 group = 'uk.gov.ons.census.fwmt'
 version = rootProject.file('version.txt').text.trim()
 
